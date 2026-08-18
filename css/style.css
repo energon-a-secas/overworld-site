@@ -1,0 +1,983 @@
+/* ── Reset & base ──────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/*
+ * ── Design tokens ─────────────────────────────────────────────
+ *
+ * Canonical tokens (colors, font, type scale, spacing, radii) come from the CDN:
+ *   https://cdn.neorgon.org/v1.0.0/styles/base.css   (linked in index.html)
+ * Do NOT redeclare them here — a local copy is how the fleet drifted. The block
+ * below holds only what base.css does not define, plus the per-site accent.
+ *
+ * Motion: base.css still ships --ease-snap (bounce) for legacy sites, but it is
+ * deprecated for new work (impeccable law: ease-out exponential, no bounce).
+ * Use --ease-out below.
+ */
+
+:root {
+  /* Per-site identity — set to this site's hub card accent (PROJECTS.md section 4) */
+  --accent: #b45309;
+
+  /* Site extras base.css does not define */
+  --surface-toast: #1a1730;
+  --danger: #e11d48;
+  --danger-hover: #f43f5e;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --control-height: 44px;
+  --control-height-sm: 36px;
+  --shadow-card: 0 12px 28px rgba(15, 23, 42, 0.5);
+  --shadow-modal: 0 24px 48px rgba(2, 6, 23, 0.58);
+  --z-sticky-header: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* Author display values (e.g. .section/.stack flex) would otherwise defeat the
+   hidden attribute — restore its authority once, globally. */
+[hidden] { display: none !important; }
+
+html { height: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  min-height: 100%;
+  color: var(--text-primary);
+  display: flex; flex-direction: column;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+main#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+/* ── Layout ────────────────────────────────────────────────── */
+/*
+ * GOTCHA: body { display:flex; flex-direction:column } + margin: 0 auto
+ * on a child collapses its width — always pair with width: 100%.
+ *
+ * GOTCHA: External images (YouTube ggpht, Gravatar, etc.) may block loading
+ * when the Referer header points to localhost or an unknown origin. Fix:
+ * 1. Add <meta name="referrer" content="no-referrer"> in <head> (global)
+ * 2. Or add referrerpolicy="no-referrer" on each <img> tag
+ */
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-6);
+  flex: 1;
+}
+
+/* Vertical rhythm: use inside .container or nested regions */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.stack--tight { gap: var(--space-4); }
+.stack--loose { gap: var(--space-8); }
+
+/* Page section: title row + body (replaces “card everything” for grouping) */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.section__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.section__titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.section__title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+.section__lead {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.45;
+  max-width: 52ch;
+}
+.section__lead code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.92em;
+  color: var(--text-secondary);
+}
+.stack > .card { margin-bottom: 0; }
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ── Header ────────────────────────────────────────────────────
+ * Owned by the Neorgon Header Kit (css/neorgon-header.css — canonical
+ * source: packages/neorgon-ui/header/). Do NOT style .header-bar,
+ * .header-logo*, .header-title-link, .header-subtitle, .header-right,
+ * .header-actions, or .header-home here. Auth styles (.auth-*) stay
+ * site-owned below.
+ */
+nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ── Buttons (canonical) ─────────────────────────────────────
+ * Use .btn + a variant. Aliases: .nav-link = toolbar ghost; .auth-* map below.
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--control-height);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-primary);
+  transition:
+    background-color var(--dur),
+    color var(--dur),
+    border-color var(--dur),
+    box-shadow var(--dur),
+    transform var(--dur-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn--sm {
+  min-height: var(--control-height-sm);
+  padding: 0 var(--space-3);
+  font-size: var(--text-xs);
+}
+.btn--block { width: 100%; }
+.btn--icon {
+  min-width: var(--control-height);
+  padding: 0;
+}
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+.btn--primary:hover { background: var(--accent-bright); }
+.btn--secondary {
+  background: var(--surface-2);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.btn--ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.18);
+}
+.btn--ghost:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+  border-color: transparent;
+}
+.btn--danger:hover { background: var(--danger-hover); }
+
+/* Toolbar ghost (header nav) — same as .btn.btn--ghost.btn--sm */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height);
+  padding: 0 var(--space-3);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: background-color var(--dur), color var(--dur), border-color var(--dur);
+}
+.nav-link:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.auth-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--control-height);
+  min-height: var(--control-height);
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color var(--dur), color var(--dur), border-color var(--dur);
+}
+.auth-toggle:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.auth-toggle svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: block;
+}
+.auth-toggle.logged-in { color: var(--accent); }
+.auth-toggle.logged-in svg circle:nth-of-type(2) {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* ── Sheet (inline panel under header) — not a modal ─────────
+ * Use for auth, filters, compact forms. No backdrop; page scrolls.
+ * For blocking overlays use .modal below.
+ */
+.auth-panel {
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid var(--border-subtle);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.auth-panel.open { max-height: 300px; }
+.auth-panel-inner {
+  padding: var(--space-6);
+  max-width: 400px;
+  margin: 0 auto;
+}
+.auth-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.auth-tab {
+  flex: 1;
+  min-height: var(--control-height-sm);
+  padding: 0 var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: background-color var(--dur), color var(--dur), border-color var(--dur);
+}
+.auth-tab.active {
+  background: var(--surface-2);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.auth-form input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-family: inherit;
+}
+.auth-submit {
+  width: 100%;
+  min-height: var(--control-height);
+  padding: 0 var(--space-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background-color var(--dur);
+}
+.auth-submit:hover { background: var(--accent-bright); }
+#authUser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.auth-username {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.auth-logout {
+  min-height: var(--control-height-sm);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: background-color var(--dur), color var(--dur), border-color var(--dur);
+}
+.auth-logout:hover {
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+.auth-divider {
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+/* ── Modal (blocking overlay) ──────────────────────────────── */
+.modal[hidden] {
+  display: none !important;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 4, 12, 0.85);
+  -webkit-backdrop-filter: blur(10px); /* Safari still needs the prefix */
+  backdrop-filter: blur(10px);
+}
+.modal__dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 520px);
+  max-height: min(90vh, 680px);
+  overflow: hidden;
+  background: var(--surface-1);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+}
+/* For modals holding option grids or editors — narrow dialogs cramp them */
+.modal__dialog--wide {
+  width: min(100%, 760px);
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.modal__header h2 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.modal__body {
+  padding: var(--space-6);
+  overflow: auto;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+.modal__body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  color: var(--text-primary);
+}
+.modal__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ── Card ──────────────────────────────────────────────────── */
+/*
+ * GOTCHA: backdrop-filter creates a stacking context — dropdowns inside
+ * a card can be clipped by a later card's stacking context. Fix by adding
+ * position: relative; z-index: 10 to the card that owns the open dropdown.
+ *
+ * Default: static surface (no hover lift — avoids generic “dashboard demo”).
+ * Use .card--interactive for raised hover + entrance motion.
+ *
+ * GOTCHA: a <button> or <a> used AS a card does not inherit body text color —
+ * buttons default to canvas text (near-black), rendering invisible on the dark
+ * bg. When a card is an interactive element, set color: var(--text-primary)
+ * and font-family: var(--font) explicitly on it.
+ */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  backdrop-filter: blur(10px);
+  transition: border-color var(--dur), box-shadow var(--dur);
+}
+.card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.45);
+}
+.card--interactive {
+  transition:
+    transform var(--dur) ease-out,
+    box-shadow var(--dur) ease-out,
+    border-color var(--dur);
+  animation: fadeIn 0.35s ease-out both;
+}
+.card--interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--border-strong);
+}
+.card--enter {
+  animation: fadeIn 0.35s ease-out both;
+}
+.card--flat:hover {
+  box-shadow: none;
+}
+/* Card with an action row, in an equal-height grid: pin the toolbar to the
+   bottom so buttons align across cards whose text wraps differently. */
+.card--actions {
+  display: flex;
+  flex-direction: column;
+}
+.card--actions > .toolbar:last-child {
+  margin-top: auto;
+}
+
+/* ── Button press feedback ─────────────────────────────────── */
+button:active,
+.btn:active,
+.nav-link:active,
+.auth-toggle:active,
+.auth-tab:active,
+.auth-submit:active,
+.auth-logout:active {
+  transform: scale(0.98);
+  transition-duration: var(--dur-fast);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Skeleton loading ──────────────────────────────────────── */
+@keyframes shimmer { to { background-position: -200% 0; } }
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-1) 25%, var(--surface-2) 50%, var(--surface-1) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius);
+}
+
+/* ── Toast ─────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-toast);
+  max-width: min(360px, calc(100vw - var(--space-8)));
+  background: var(--surface-toast);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-card);
+  pointer-events: none;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+.toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Footer ────────────────────────────────────────────────────
+   Owned by the Neorgon Footer Kit (css/neorgon-footer.css).
+   Don't add .neo-footer rules here — edit packages/neorgon-ui/footer/
+   and re-run sync-footer.sh. */
+
+/* ── Focus styles ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+/* ── Skip link ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 1000;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent-bright);
+  color: #000;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+  transition: top var(--dur);
+}
+.skip-link:focus { top: 0; }
+
+/* ── Reduced motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .card--interactive:hover { transform: none; }
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .container { padding: var(--space-4); }
+  .toast {
+    left: var(--space-4);
+    right: var(--space-4);
+    max-width: none;
+  }
+}
+
+/* ── Overworld: the tavern palette ─────────────────────────────
+ *
+ * Warm, low, lamplit. The brief was "tavern, but modern": that means the warmth
+ * comes from colour and light, not from wood-grain textures or a slab-serif
+ * pretending to be carved. Type stays the fleet's, spacing stays generous, and
+ * the only ornament is the glow on the block you are currently standing in.
+ *
+ * The surfaces are deliberately warmer than the CDN base.css dark theme, so
+ * they are declared here rather than overriding the shared tokens.
+ */
+
+:root {
+  --tav-bg:        #16110d;
+  --tav-surface:   #201811;
+  --tav-surface-2: #2a2017;
+  --tav-border:    #3d2f22;
+  --tav-border-lit:#6b4f2f;
+  --tav-text:      #f2e6d8;
+  --tav-muted:     #b09a83;
+  --tav-brass:     #d4a24c;
+  --tav-ember:     #e2703a;
+  --tav-moss:      #7fa66a;
+  --tav-glow:      0 0 0 1px rgba(212,162,76,.18), 0 8px 30px rgba(226,112,58,.10);
+}
+
+/* Both, not just body: an untinted html shows through on overscroll and in the
+   band a sticky auto-hiding header leaves behind, which reads as a black gap. */
+html, body { background: var(--tav-bg); }
+body { color: var(--tav-text); }
+.card { background: var(--tav-surface); border-color: var(--tav-border); }
+.muted, .field__hint, .block__hint { color: var(--tav-muted); }
+
+/* ── Overworld components ──────────────────────────────────────
+ * Everything below is this site's own. Tokens still come from the CDN
+ * base.css; only per-component layout lives here.
+ *
+ * The facet colours are the one place a hue carries meaning: each of the four
+ * facets keeps the same colour in the mission chips, the capture preview and
+ * the coverage cards, so a zone reads as a zone wherever it appears.
+ */
+
+:root {
+  --facet-zone:    #38bdf8;
+  --facet-area:    #a78bfa;
+  --facet-horizon: #fbbf24;
+  --facet-kind:    #34d399;
+  --overdue:       #fb7185;
+}
+
+/* ── View navigation (sits inside .header-actions) ─────────── */
+.view-nav { display: flex; gap: 2px; flex-wrap: wrap; }
+
+.nav-tab {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary, #94a3b8);
+  font: inherit;
+  font-size: 0.86rem;
+  padding: 0 12px;
+  height: var(--header-control-h, 40px);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color .18s var(--ease-out), background .18s var(--ease-out);
+}
+.nav-tab:hover { color: var(--text-primary); background: rgba(255,255,255,.06); }
+.nav-tab.is-active {
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* ── Zone rail ─────────────────────────────────────────────── */
+.zone-rail {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  padding: 4px 0 12px;
+}
+.zone-chip {
+  appearance: none; cursor: pointer; font: inherit; font-size: .88rem;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--surface-2, #141a2e);
+  border: 1px solid var(--border, #24304d);
+  color: var(--text-secondary, #94a3b8);
+  transition: border-color .18s var(--ease-out), color .18s var(--ease-out);
+}
+.zone-chip:hover { color: var(--text-primary); border-color: var(--facet-zone); }
+.zone-chip.is-active {
+  color: var(--text-primary);
+  border-color: var(--facet-zone);
+  background: color-mix(in srgb, var(--facet-zone) 16%, transparent);
+}
+.zone-chip__count {
+  font-variant-numeric: tabular-nums; font-size: .78rem;
+  opacity: .75; padding: 1px 7px; border-radius: 999px;
+  background: rgba(255,255,255,.08);
+}
+
+/* ── Missions ──────────────────────────────────────────────── */
+.mission-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.mission { display: flex; flex-direction: column; gap: 10px; }
+.mission__head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.mission__type {
+  font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text-secondary, #94a3b8);
+}
+.mission__due { font-size: .78rem; color: var(--text-secondary, #94a3b8); }
+.mission__due.is-overdue { color: var(--overdue); font-weight: 600; }
+.mission__title { font-size: 1rem; line-height: 1.35; margin: 0; }
+.mission__notes {
+  font-size: .85rem; color: var(--text-secondary, #94a3b8); margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.facet-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.facet-row--empty { font-size: .78rem; color: var(--text-secondary, #94a3b8); opacity: .6; }
+.facet-chip {
+  font-size: .76rem; padding: 3px 9px; border-radius: 6px;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+  border: 1px solid currentColor;
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+.facet-chip--zone    { color: var(--facet-zone); }
+.facet-chip--area    { color: var(--facet-area); }
+.facet-chip--horizon { color: var(--facet-horizon); }
+.facet-chip--kind    { color: var(--facet-kind); }
+
+/* ── Forms ─────────────────────────────────────────────────── */
+.field { display: block; }
+.field__label {
+  display: block; font-size: .8rem; margin-bottom: 6px;
+  color: var(--text-secondary, #94a3b8);
+}
+.field__hint { font-size: .82rem; color: var(--text-secondary, #94a3b8); margin: 0; }
+.input {
+  width: 100%; font: inherit; color: var(--text-primary);
+  background: var(--surface-2, #141a2e);
+  border: 1px solid var(--border, #24304d);
+  border-radius: 10px; padding: 0 14px; height: var(--control-height);
+  transition: border-color .18s var(--ease-out);
+}
+.input:focus-visible { outline: none; border-color: var(--accent); }
+.input--lg { height: 52px; font-size: 1.05rem; }
+
+.capture-preview { min-height: 28px; }
+.capture-preview__row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .9rem; }
+.capture-preview__label {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--text-secondary, #94a3b8);
+}
+
+/* ── Dashboard ─────────────────────────────────────────────── */
+.stat-row {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+.stat-tile {
+  background: var(--surface-2, #141a2e);
+  border: 1px solid var(--border, #24304d);
+  border-radius: 12px; padding: 14px 16px;
+}
+.stat-tile__label {
+  font-size: .74rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--text-secondary, #94a3b8);
+}
+.stat-tile__value {
+  font-size: 1.9rem; font-weight: 650; line-height: 1.15;
+  font-variant-numeric: tabular-nums; margin: 4px 0 2px;
+}
+.stat-tile__sub { font-size: .78rem; color: var(--text-secondary, #94a3b8); }
+
+.chart-scroll { overflow-x: auto; }
+.chart { width: 100%; min-width: 420px; height: auto; display: block; }
+.chart__bar { fill: var(--accent); }
+.chart__bar:hover { fill: var(--facet-zone); }
+.chart__axis { stroke: var(--border, #24304d); stroke-width: 1; }
+
+.zone-bars { display: flex; flex-direction: column; gap: 8px; }
+.zone-bar { display: grid; grid-template-columns: 110px 1fr 40px; gap: 10px; align-items: center; }
+.zone-bar__label { font-size: .85rem; color: var(--facet-zone); }
+.zone-bar__track { height: 10px; border-radius: 999px; background: rgba(255,255,255,.07); overflow: hidden; }
+.zone-bar__fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+.zone-bar__count { font-size: .85rem; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ── Hygiene ───────────────────────────────────────────────── */
+.coverage-grid {
+  display: grid; gap: 12px; margin-bottom: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.coverage-card {
+  background: var(--surface-2, #141a2e);
+  border: 1px solid var(--border, #24304d);
+  border-radius: 12px; padding: 14px 16px;
+}
+.coverage-card__label { font-size: .8rem; color: var(--text-secondary, #94a3b8); }
+.coverage-card__value { font-size: 1.6rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.coverage-card__sub { font-size: .76rem; color: var(--text-secondary, #94a3b8); margin-top: 6px; }
+.coverage-bar { height: 6px; border-radius: 999px; background: rgba(255,255,255,.07); overflow: hidden; }
+.coverage-bar__fill { display: block; height: 100%; background: var(--accent); }
+
+.finding__list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.finding__list li {
+  display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+  font-size: .88rem; padding: 6px 0; border-bottom: 1px solid var(--border, #24304d);
+}
+.finding__list li:last-child { border-bottom: none; }
+.finding__type { font-size: .74rem; color: var(--text-secondary, #94a3b8); text-transform: uppercase; }
+.finding--clear { opacity: .72; }
+
+/* ── Tables ────────────────────────────────────────────────── */
+.grammar-table, .count-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.grammar-table th {
+  text-align: left; font-size: .74rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--text-secondary, #94a3b8); padding: 6px 10px 6px 0; font-weight: 500;
+}
+.grammar-table td, .count-table td {
+  padding: 8px 10px 8px 0; border-top: 1px solid var(--border, #24304d); vertical-align: top;
+}
+.count-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.count-table__total td { font-weight: 650; }
+
+/* ── Small shared pieces ───────────────────────────────────── */
+.muted { color: var(--text-secondary, #94a3b8); }
+.empty, .loading { color: var(--text-secondary, #94a3b8); padding: 28px 0; text-align: center; }
+.plain-list { margin: 8px 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: .9rem; }
+.card__title { font-size: 1rem; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+.badge {
+  font-size: .74rem; padding: 2px 8px; border-radius: 999px;
+  background: rgba(255,255,255,.09); color: var(--text-secondary, #94a3b8);
+}
+.badge--ok { background: color-mix(in srgb, var(--facet-kind) 22%, transparent); color: var(--facet-kind); }
+.card--error { border-color: var(--danger); }
+.card--connected { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.connect-status { font-size: .86rem; margin: 0; min-height: 1.2em; }
+.connect-status.is-error { color: var(--danger-hover); }
+.connect-status.is-ok { color: var(--facet-kind); }
+.field__hint.is-error { color: var(--danger-hover); }
+.field__hint.is-ok { color: var(--facet-kind); }
+
+@media (max-width: 700px) {
+  .view-nav { gap: 0; }
+  .nav-tab { padding: 0 9px; font-size: .8rem; }
+  .zone-bar { grid-template-columns: 88px 1fr 34px; }
+}
+
+/* ── Today: hero ───────────────────────────────────────────── */
+.hero {
+  display: flex; gap: 24px; flex-wrap: wrap; justify-content: space-between;
+  padding: 22px 24px; border-radius: 16px;
+  background: linear-gradient(135deg, var(--tav-surface-2), var(--tav-surface));
+  border: 1px solid var(--tav-border);
+  box-shadow: var(--tav-glow);
+}
+.hero__left { display: flex; flex-direction: column; gap: 8px; min-width: 260px; flex: 1; }
+.hero__greeting { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em; }
+.hero__progress { color: var(--tav-muted); font-size: .95rem; }
+.hero__progress strong { color: var(--tav-brass); }
+.hero__meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .8rem; padding: 4px 11px; border-radius: 999px;
+  background: rgba(0,0,0,.28); border: 1px solid var(--tav-border);
+  font-variant-numeric: tabular-nums;
+}
+.chip--level { color: var(--tav-brass); border-color: var(--tav-border-lit); }
+.chip--gold  { color: var(--tav-brass); }
+
+.meter { display: block; height: 7px; border-radius: 999px; background: rgba(0,0,0,.42); overflow: hidden; }
+.meter__fill { display: block; height: 100%; border-radius: 999px; }
+.meter--xp .meter__fill { background: linear-gradient(90deg, var(--tav-brass), var(--tav-ember)); }
+.meter--hp .meter__fill { background: var(--tav-ember); }
+.meter--inline { width: 44px; height: 5px; }
+
+.hero__streaks { display: flex; flex-direction: column; gap: 6px; min-width: 200px; }
+.hero__streaks-label {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: var(--tav-muted);
+}
+.streak { display: flex; align-items: baseline; gap: 10px; font-size: .88rem; }
+.streak__count {
+  min-width: 2.1em; text-align: right; font-weight: 700; color: var(--tav-brass);
+  font-variant-numeric: tabular-nums;
+}
+.streak__text { color: var(--tav-muted); }
+
+/* ── Today: time blocks ────────────────────────────────────── */
+.blocks { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+
+.block {
+  background: var(--tav-surface); border: 1px solid var(--tav-border);
+  border-radius: 14px; padding: 16px 18px;
+}
+/* The one piece of ornament in the design: the block you are standing in. */
+.block.is-current { border-color: var(--tav-border-lit); box-shadow: var(--tav-glow); }
+
+.block__head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.block__title { font-size: .95rem; font-weight: 600; margin: 0; letter-spacing: .01em; }
+.block__now {
+  font-size: .66rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--tav-bg); background: var(--tav-brass);
+  padding: 2px 7px; border-radius: 999px; font-weight: 700;
+}
+.block__count { margin-left: auto; color: var(--tav-muted); font-size: .82rem; font-variant-numeric: tabular-nums; }
+.block__empty, .block__hint { font-size: .84rem; margin: 0 0 8px; }
+
+/* ── Tasks ─────────────────────────────────────────────────── */
+.task-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.task {
+  display: flex; align-items: flex-start; gap: 11px;
+  padding: 8px 6px; border-radius: 9px;
+  transition: background .16s var(--ease-out);
+}
+.task:hover { background: rgba(255,255,255,.035); }
+.task.is-done .task__text { text-decoration: line-through; color: var(--tav-muted); }
+
+.task__check {
+  flex: none; width: 22px; height: 22px; margin-top: 1px;
+  border-radius: 7px; cursor: pointer;
+  border: 1.5px solid var(--tav-border-lit); background: transparent;
+  color: var(--tav-bg); font-size: .8rem; line-height: 1;
+  display: grid; place-items: center;
+  transition: background .16s var(--ease-out), border-color .16s var(--ease-out);
+}
+.task__check:hover { border-color: var(--tav-brass); }
+.task.is-done .task__check { background: var(--tav-brass); border-color: var(--tav-brass); }
+
+.task__score {
+  flex: none; width: 24px; height: 24px; border-radius: 8px; cursor: pointer;
+  border: 1.5px solid var(--tav-border-lit); background: transparent;
+  font-size: 1rem; line-height: 1; display: grid; place-items: center; font-weight: 700;
+  transition: background .16s var(--ease-out), color .16s var(--ease-out);
+}
+.task__score--up { color: var(--tav-moss); }
+.task__score--up:hover { background: var(--tav-moss); color: var(--tav-bg); border-color: var(--tav-moss); }
+.task__score--down { color: var(--tav-ember); }
+.task__score--down:hover { background: var(--tav-ember); color: var(--tav-bg); border-color: var(--tav-ember); }
+
+.task__body { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.task__text { font-size: .92rem; line-height: 1.35; }
+.task__streak {
+  flex: none; font-size: .76rem; color: var(--tav-brass); font-variant-numeric: tabular-nums;
+  background: rgba(212,162,76,.12); padding: 2px 8px; border-radius: 999px; align-self: center;
+}
+
+.tier { flex: none; width: 8px; height: 8px; border-radius: 50%; align-self: center; }
+.tier--worst { background: #d1495b; } .tier--worse { background: #e0663f; }
+.tier--bad { background: #e0913f; }   .tier--neutral { background: #6b5b4a; }
+.tier--good { background: #b7c35f; }  .tier--better { background: #7fa66a; }
+.tier--best { background: #4e9d6b; }
+
+/* ── Habits ────────────────────────────────────────────────── */
+.habit-columns { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.habit-col {
+  background: var(--tav-surface); border: 1px solid var(--tav-border);
+  border-radius: 14px; padding: 16px 18px;
+}
+.habit-col--down { border-color: rgba(226,112,58,.28); }
+
+.visually-quiet {
+  font-size: .74rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--tav-muted); font-weight: 600; margin: 22px 0 10px;
+}
+
+/* ── Demo banner ───────────────────────────────────────────── */
+.demo-banner {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 11px 16px; margin-bottom: 16px; border-radius: 11px;
+  font-size: .88rem; color: var(--tav-text);
+  background: rgba(212,162,76,.10);
+  border: 1px solid rgba(212,162,76,.34);
+}
+.demo-banner strong { color: var(--tav-brass); }
+.demo-banner .btn { margin-left: auto; }
+
+/* ── Recipes ───────────────────────────────────────────────── */
+.recipes-intro { margin: -4px 0 12px; font-size: .88rem; }
+.recipe { padding-bottom: 8px; }
+.recipe__head { display: flex; align-items: flex-start; gap: 12px; }
+.recipe__head .card__title { flex: 1; }
+.recipe__body {
+  margin: 10px 0 0; padding: 14px 16px; border-radius: 10px;
+  background: rgba(0,0,0,.34); border: 1px solid var(--tav-border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .8rem; line-height: 1.5; color: var(--tav-text);
+  max-height: 22em; overflow: auto; white-space: pre;
+}
+.recipe__body code { font: inherit; color: inherit; background: none; }

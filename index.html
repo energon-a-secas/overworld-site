@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    The load-bearing directive here is connect-src. It is what makes the promise
+    on the Connect view checkable rather than a claim: this page can talk to
+    habitica.com and nowhere else, so the credentials have no route to any other
+    host even if something on the page were compromised.
+
+    style-src keeps 'unsafe-inline' because the charts set bar widths through
+    style attributes. That is a real relaxation, and it is the reason script-src
+    is kept strict at 'self' with no inline scripts at all.
+
+    frame-ancestors and X-Frame-Options are deliberately absent: both are ignored
+    in a meta CSP, and GitHub Pages cannot send response headers. Writing them
+    here would look like protection while doing nothing.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    connect-src 'self' https://habitica.com;
+    style-src 'self' https://cdn.neorgon.org 'unsafe-inline';
+    img-src 'self' https://cdn.neorgon.org data:;
+    font-src 'self' https://cdn.neorgon.org data:;
+    base-uri 'self';
+    form-action 'none';
+    object-src 'none'">
+
+  <title>Overworld | Your Habitica day, at a glance</title>
+  <meta name="description" content="Map your Habitica tasks onto zones, see open missions where you are, and archive the completed to-dos Habitica deletes after 30 days">
+  <meta property="og:title" content="Overworld: Habitica by zone">
+  <meta property="og:description" content="See what you can do where you are, and keep the history Habitica throws away">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://overworld.neorgon.com/">
+  <meta property="og:site_name" content="Neorgon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Overworld: Habitica by zone">
+  <meta name="twitter:description" content="See what you can do where you are, and keep the history Habitica throws away">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://overworld.neorgon.com/">
+  <meta property="og:locale" content="en_US">
+  <meta name="theme-color" content="#16110d">
+  <meta name="neo-repo" content="https://github.com/energon-a-secas/overworld-site">
+  <!-- og:image: uncomment when social preview image is ready (1200x630)
+  <meta property="og:image" content="https://overworld.neorgon.com/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"> -->
+  <link rel="icon" type="image/x-icon" href="https://cdn.neorgon.org/v1.0.0/favicon.ico" />
+  <!-- Fleet design tokens — canonical, do not redeclare locally (PROJECTS.md section 5) -->
+  <link rel="stylesheet" href="https://cdn.neorgon.org/v1.0.0/styles/base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/neorgon-header.css">
+  <link rel="stylesheet" href="css/neorgon-themes.css">
+  <link rel="stylesheet" href="https://cdn.neorgon.org/v1.0.0/header/season.css">
+  <script defer src="js/neorgon-header.js"></script>
+  <link rel="stylesheet" href="css/neorgon-footer.css">
+  <script defer src="js/neorgon-footer.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Overworld",
+    "description": "Map Habitica tasks onto zones, surface the missions reachable from where you are, and archive the completed to-dos Habitica deletes after 30 days",
+    "url": "https://overworld.neorgon.com/",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "Neorgon", "url": "https://neorgon.com/" }
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- brass: the kit's warm skin, so the header sits with the tavern palette
+       instead of fighting it. Season and visitor themes still win over it. -->
+  <header class="header-bar" data-header-mode="app" data-header-skin="brass">
+    <div class="header-logo">
+      <a href="https://neorgon.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.neorgon.org/v1.0.0/energon-classic-logo.png" class="header-logo-img" alt="Logo">
+      </a>
+      <a href="./" class="header-title-link">
+        <h1>Overworld</h1>
+        <div class="header-subtitle">Routines, quests and what you kept</div>
+      </a>
+    </div>
+
+    <div class="header-right">
+      <div class="header-actions">
+        <nav id="viewNav" class="view-nav" aria-label="Views" data-keep-mobile></nav>
+      </div>
+
+      <a class="header-home" href="https://neorgon.com/" title="neorgon.com" aria-label="Neorgon home">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container stack" id="appMain">
+      <p class="loading" role="status">Starting up…</p>
+    </div>
+  </main>
+
+  <footer class="neo-footer" data-footer-mode="app">
+    Your Habitica credentials stay in this browser and are sent only to habitica.com.
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

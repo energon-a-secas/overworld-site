@@ -1,0 +1,2596 @@
+{
+ "archivedCompletions": [
+  {
+   "completed": true,
+   "createdAt": "2026-08-08T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-14T22:44:58.690870+00:00",
+   "id": "demo-done-0-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-12T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-13T22:44:58.690870+00:00",
+   "id": "demo-done-1-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-08T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-13T19:44:58.690870+00:00",
+   "id": "demo-done-1-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-05T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-13T16:44:58.690870+00:00",
+   "id": "demo-done-1-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-11T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-12T22:44:58.690870+00:00",
+   "id": "demo-done-2-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-11T22:44:58.690870+00:00",
+   "id": "demo-done-3-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-11T19:44:58.690870+00:00",
+   "id": "demo-done-3-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-10T22:44:58.690870+00:00",
+   "id": "demo-done-4-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-07T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-10T19:44:58.690870+00:00",
+   "id": "demo-done-4-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-31T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-09T22:44:58.690870+00:00",
+   "id": "demo-done-5-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-09T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-09T19:44:58.690870+00:00",
+   "id": "demo-done-5-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-09T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-09T16:44:58.690870+00:00",
+   "id": "demo-done-5-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-05T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-07T22:44:58.690870+00:00",
+   "id": "demo-done-7-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-06T22:44:58.690870+00:00",
+   "id": "demo-done-8-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-06T19:44:58.690870+00:00",
+   "id": "demo-done-8-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-04T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-05T22:44:58.690870+00:00",
+   "id": "demo-done-9-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-31T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-05T19:44:58.690870+00:00",
+   "id": "demo-done-9-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-05T16:44:58.690870+00:00",
+   "id": "demo-done-9-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-04T22:44:58.690870+00:00",
+   "id": "demo-done-10-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-04T19:44:58.690870+00:00",
+   "id": "demo-done-10-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-04T16:44:58.690870+00:00",
+   "id": "demo-done-10-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-22T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-03T22:44:58.690870+00:00",
+   "id": "demo-done-11-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-27T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-03T19:44:58.690870+00:00",
+   "id": "demo-done-11-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-10"
+   ],
+   "text": "Return the library book",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-03T16:44:58.690870+00:00",
+   "id": "demo-done-11-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-21T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-02T22:44:58.690870+00:00",
+   "id": "demo-done-12-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-21T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-29T22:44:58.690870+00:00",
+   "id": "demo-done-16-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-24T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-29T19:44:58.690870+00:00",
+   "id": "demo-done-16-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-24T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-28T22:44:58.690870+00:00",
+   "id": "demo-done-17-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-27T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-28T19:44:58.690870+00:00",
+   "id": "demo-done-17-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-28T16:44:58.690870+00:00",
+   "id": "demo-done-17-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-20T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-27T22:44:58.690870+00:00",
+   "id": "demo-done-18-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-16T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-26T22:44:58.690870+00:00",
+   "id": "demo-done-19-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-14T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-26T19:44:58.690870+00:00",
+   "id": "demo-done-19-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-14T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-25T22:44:58.690870+00:00",
+   "id": "demo-done-20-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-10"
+   ],
+   "text": "Return the library book",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-15T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-24T22:44:58.690870+00:00",
+   "id": "demo-done-21-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-23T22:44:58.690870+00:00",
+   "id": "demo-done-22-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-19T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-23T19:44:58.690870+00:00",
+   "id": "demo-done-22-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-22T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-22T22:44:58.690870+00:00",
+   "id": "demo-done-23-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-12T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-22T19:44:58.690870+00:00",
+   "id": "demo-done-23-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-17T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-21T22:44:58.690870+00:00",
+   "id": "demo-done-24-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-11T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-21T19:44:58.690870+00:00",
+   "id": "demo-done-24-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-13T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-20T22:44:58.690870+00:00",
+   "id": "demo-done-25-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-19T22:44:58.690870+00:00",
+   "id": "demo-done-26-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-14T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-17T22:44:58.690870+00:00",
+   "id": "demo-done-28-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-15T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-17T19:44:58.690870+00:00",
+   "id": "demo-done-28-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-16T22:44:58.690870+00:00",
+   "id": "demo-done-29-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-03T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-16T19:44:58.690870+00:00",
+   "id": "demo-done-29-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-15T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-16T16:44:58.690870+00:00",
+   "id": "demo-done-29-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-09T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-15T22:44:58.690870+00:00",
+   "id": "demo-done-30-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-12T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-14T22:44:58.690870+00:00",
+   "id": "demo-done-31-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-01T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-14T19:44:58.690870+00:00",
+   "id": "demo-done-31-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-02T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-13T22:44:58.690870+00:00",
+   "id": "demo-done-32-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-08T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-13T19:44:58.690870+00:00",
+   "id": "demo-done-32-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-09T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-12T22:44:58.690870+00:00",
+   "id": "demo-done-33-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-11T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-12T19:44:58.690870+00:00",
+   "id": "demo-done-33-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-12T16:44:58.690870+00:00",
+   "id": "demo-done-33-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-04T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-08T22:44:58.690870+00:00",
+   "id": "demo-done-37-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-08T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-08T19:44:58.690870+00:00",
+   "id": "demo-done-37-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-06-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-07T22:44:58.690870+00:00",
+   "id": "demo-done-38-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-04T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-06T22:44:58.690870+00:00",
+   "id": "demo-done-39-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-10"
+   ],
+   "text": "Return the library book",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-06-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-05T22:44:58.690870+00:00",
+   "id": "demo-done-40-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-06-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-05T19:44:58.690870+00:00",
+   "id": "demo-done-40-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-06-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-05T16:44:58.690870+00:00",
+   "id": "demo-done-40-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-03T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-03T22:44:58.690870+00:00",
+   "id": "demo-done-42-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-02T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-03T19:44:58.690870+00:00",
+   "id": "demo-done-42-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-06-30T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-02T22:44:58.690870+00:00",
+   "id": "demo-done-43-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  }
+ ],
+ "completedTodos": [
+  {
+   "completed": true,
+   "createdAt": "2026-08-08T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-14T22:44:58.690870+00:00",
+   "id": "demo-done-0-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-12T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-13T22:44:58.690870+00:00",
+   "id": "demo-done-1-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-08T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-13T19:44:58.690870+00:00",
+   "id": "demo-done-1-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-05T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-13T16:44:58.690870+00:00",
+   "id": "demo-done-1-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-11T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-12T22:44:58.690870+00:00",
+   "id": "demo-done-2-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-11T22:44:58.690870+00:00",
+   "id": "demo-done-3-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-11T19:44:58.690870+00:00",
+   "id": "demo-done-3-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-10T22:44:58.690870+00:00",
+   "id": "demo-done-4-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-07T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-10T19:44:58.690870+00:00",
+   "id": "demo-done-4-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-31T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-09T22:44:58.690870+00:00",
+   "id": "demo-done-5-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-09T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-09T19:44:58.690870+00:00",
+   "id": "demo-done-5-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-09T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-09T16:44:58.690870+00:00",
+   "id": "demo-done-5-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-05T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-07T22:44:58.690870+00:00",
+   "id": "demo-done-7-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-06T22:44:58.690870+00:00",
+   "id": "demo-done-8-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-06T19:44:58.690870+00:00",
+   "id": "demo-done-8-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-08-04T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-05T22:44:58.690870+00:00",
+   "id": "demo-done-9-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-31T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-05T19:44:58.690870+00:00",
+   "id": "demo-done-9-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-05T16:44:58.690870+00:00",
+   "id": "demo-done-9-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-04T22:44:58.690870+00:00",
+   "id": "demo-done-10-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-04T19:44:58.690870+00:00",
+   "id": "demo-done-10-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-28T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-04T16:44:58.690870+00:00",
+   "id": "demo-done-10-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-22T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-03T22:44:58.690870+00:00",
+   "id": "demo-done-11-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-27T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-03T19:44:58.690870+00:00",
+   "id": "demo-done-11-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-10"
+   ],
+   "text": "Return the library book",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-29T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-03T16:44:58.690870+00:00",
+   "id": "demo-done-11-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-21T00:44:58.690870+00:00",
+   "dateCompleted": "2026-08-02T22:44:58.690870+00:00",
+   "id": "demo-done-12-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-21T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-29T22:44:58.690870+00:00",
+   "id": "demo-done-16-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-24T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-29T19:44:58.690870+00:00",
+   "id": "demo-done-16-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-24T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-28T22:44:58.690870+00:00",
+   "id": "demo-done-17-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-27T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-28T19:44:58.690870+00:00",
+   "id": "demo-done-17-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-28T16:44:58.690870+00:00",
+   "id": "demo-done-17-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-20T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-27T22:44:58.690870+00:00",
+   "id": "demo-done-18-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-16T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-26T22:44:58.690870+00:00",
+   "id": "demo-done-19-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-14T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-26T19:44:58.690870+00:00",
+   "id": "demo-done-19-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-14T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-25T22:44:58.690870+00:00",
+   "id": "demo-done-20-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-10"
+   ],
+   "text": "Return the library book",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-15T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-24T22:44:58.690870+00:00",
+   "id": "demo-done-21-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-23T22:44:58.690870+00:00",
+   "id": "demo-done-22-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-19T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-23T19:44:58.690870+00:00",
+   "id": "demo-done-22-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-22T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-22T22:44:58.690870+00:00",
+   "id": "demo-done-23-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17"
+   ],
+   "text": "Restock cat food",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-12T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-22T19:44:58.690870+00:00",
+   "id": "demo-done-23-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-17T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-21T22:44:58.690870+00:00",
+   "id": "demo-done-24-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-11T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-21T19:44:58.690870+00:00",
+   "id": "demo-done-24-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-13T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-20T22:44:58.690870+00:00",
+   "id": "demo-done-25-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-19T22:44:58.690870+00:00",
+   "id": "demo-done-26-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6"
+   ],
+   "text": "Book the eye test",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-14T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-17T22:44:58.690870+00:00",
+   "id": "demo-done-28-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Pay the electricity bill",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-15T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-17T19:44:58.690870+00:00",
+   "id": "demo-done-28-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4"
+   ],
+   "text": "Send the invoice",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-10T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-16T22:44:58.690870+00:00",
+   "id": "demo-done-29-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Fix the wobbly shelf",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-03T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-16T19:44:58.690870+00:00",
+   "id": "demo-done-29-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Back up the laptop",
+   "type": "todo"
+  },
+  {
+   "completed": true,
+   "createdAt": "2026-07-15T00:44:58.690870+00:00",
+   "dateCompleted": "2026-07-16T16:44:58.690870+00:00",
+   "id": "demo-done-29-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-5"
+   ],
+   "text": "Water the plants",
+   "type": "todo"
+  }
+ ],
+ "format": "overworld-demo",
+ "generated": "2026-08-15T00:44:58.690870+00:00",
+ "note": "Invented sample data. Not anyone real account.",
+ "tags": [
+  {
+   "id": "demo-tag-0",
+   "name": "@home"
+  },
+  {
+   "id": "demo-tag-1",
+   "name": "@office"
+  },
+  {
+   "id": "demo-tag-2",
+   "name": "@errand"
+  },
+  {
+   "id": "demo-tag-3",
+   "name": "@anywhere"
+  },
+  {
+   "id": "demo-tag-4",
+   "name": "+work"
+  },
+  {
+   "id": "demo-tag-5",
+   "name": "+personal"
+  },
+  {
+   "id": "demo-tag-6",
+   "name": "+health"
+  },
+  {
+   "id": "demo-tag-7",
+   "name": "+money"
+  },
+  {
+   "id": "demo-tag-8",
+   "name": "+hobby"
+  },
+  {
+   "id": "demo-tag-9",
+   "name": "!now"
+  },
+  {
+   "id": "demo-tag-10",
+   "name": "!week"
+  },
+  {
+   "id": "demo-tag-11",
+   "name": "!someday"
+  },
+  {
+   "id": "demo-tag-12",
+   "name": "*morning"
+  },
+  {
+   "id": "demo-tag-13",
+   "name": "*midday"
+  },
+  {
+   "id": "demo-tag-14",
+   "name": "*evening"
+  },
+  {
+   "id": "demo-tag-15",
+   "name": "*night"
+  },
+  {
+   "id": "demo-tag-16",
+   "name": "*anytime"
+  },
+  {
+   "id": "demo-tag-17",
+   "name": "?buy"
+  },
+  {
+   "id": "demo-tag-18",
+   "name": "?call"
+  },
+  {
+   "id": "demo-tag-19",
+   "name": "?read"
+  },
+  {
+   "id": "demo-tag-20",
+   "name": "?fix"
+  },
+  {
+   "id": "demo-tag-21",
+   "name": "?practice"
+  },
+  {
+   "id": "demo-tag-22",
+   "name": "?avoid"
+  },
+  {
+   "id": "demo-tag-23",
+   "name": "?review"
+  }
+ ],
+ "tasks": [
+  {
+   "completed": true,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-0",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 41,
+   "tags": [
+    "demo-tag-12",
+    "demo-tag-6",
+    "demo-tag-0"
+   ],
+   "text": "Stretch and drink water",
+   "type": "daily"
+  },
+  {
+   "completed": true,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-1",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 41,
+   "tags": [
+    "demo-tag-12",
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Make the bed",
+   "type": "daily"
+  },
+  {
+   "completed": false,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-2",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 12,
+   "tags": [
+    "demo-tag-12",
+    "demo-tag-4",
+    "demo-tag-23"
+   ],
+   "text": "Review the day ahead",
+   "type": "daily"
+  },
+  {
+   "completed": false,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-3",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 6,
+   "tags": [
+    "demo-tag-13",
+    "demo-tag-4",
+    "demo-tag-1",
+    "demo-tag-23"
+   ],
+   "text": "Inbox to zero",
+   "type": "daily"
+  },
+  {
+   "completed": true,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-4",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 3,
+   "tags": [
+    "demo-tag-13",
+    "demo-tag-6",
+    "demo-tag-3"
+   ],
+   "text": "Walk after lunch",
+   "type": "daily"
+  },
+  {
+   "completed": false,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-5",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 18,
+   "tags": [
+    "demo-tag-14",
+    "demo-tag-8",
+    "demo-tag-0",
+    "demo-tag-21"
+   ],
+   "text": "Practice guitar",
+   "type": "daily"
+  },
+  {
+   "completed": true,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-6",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 9,
+   "tags": [
+    "demo-tag-14",
+    "demo-tag-0",
+    "demo-tag-20"
+   ],
+   "text": "Tidy one surface",
+   "type": "daily"
+  },
+  {
+   "completed": false,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-7",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 27,
+   "tags": [
+    "demo-tag-15",
+    "demo-tag-8",
+    "demo-tag-19"
+   ],
+   "text": "Read before sleep",
+   "type": "daily"
+  },
+  {
+   "completed": true,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-8",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 27,
+   "tags": [
+    "demo-tag-15",
+    "demo-tag-0"
+   ],
+   "text": "Lay out tomorrow",
+   "type": "daily"
+  },
+  {
+   "completed": false,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-9",
+   "isDue": true,
+   "notes": "",
+   "priority": 1,
+   "streak": 5,
+   "tags": [
+    "demo-tag-16",
+    "demo-tag-5"
+   ],
+   "text": "Log the day",
+   "type": "daily"
+  },
+  {
+   "completed": false,
+   "everyX": 1,
+   "frequency": "daily",
+   "history": [],
+   "id": "demo-daily-10",
+   "isDue": false,
+   "notes": "",
+   "priority": 1,
+   "streak": 2,
+   "tags": [
+    "demo-tag-16",
+    "demo-tag-7",
+    "demo-tag-23"
+   ],
+   "text": "Weekly budget check",
+   "type": "daily"
+  },
+  {
+   "down": false,
+   "history": [],
+   "id": "demo-habit-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-6",
+    "demo-tag-3"
+   ],
+   "text": "Take the stairs",
+   "type": "habit",
+   "up": true,
+   "value": 8.2
+  },
+  {
+   "down": false,
+   "history": [],
+   "id": "demo-habit-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-8",
+    "demo-tag-19",
+    "demo-tag-3"
+   ],
+   "text": "Read ten pages",
+   "type": "habit",
+   "up": true,
+   "value": 12.5
+  },
+  {
+   "down": false,
+   "history": [],
+   "id": "demo-habit-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-6",
+    "demo-tag-0"
+   ],
+   "text": "Ten minutes of sun",
+   "type": "habit",
+   "up": true,
+   "value": 4.1
+  },
+  {
+   "down": false,
+   "history": [],
+   "id": "demo-habit-3",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-5"
+   ],
+   "text": "Say no to one thing",
+   "type": "habit",
+   "up": true,
+   "value": 1.4
+  },
+  {
+   "down": false,
+   "history": [],
+   "id": "demo-habit-4",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-4",
+    "demo-tag-1"
+   ],
+   "text": "Ship something small",
+   "type": "habit",
+   "up": true,
+   "value": 6.7
+  },
+  {
+   "down": true,
+   "history": [],
+   "id": "demo-habit-5",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-6",
+    "demo-tag-3"
+   ],
+   "text": "Screen time under three hours",
+   "type": "habit",
+   "up": true,
+   "value": 2.2
+  },
+  {
+   "down": true,
+   "history": [],
+   "id": "demo-habit-6",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-6",
+    "demo-tag-22",
+    "demo-tag-3"
+   ],
+   "text": "Doomscroll",
+   "type": "habit",
+   "up": false,
+   "value": -12.0
+  },
+  {
+   "down": true,
+   "history": [],
+   "id": "demo-habit-7",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-7",
+    "demo-tag-22",
+    "demo-tag-2"
+   ],
+   "text": "Buy something I will not use",
+   "type": "habit",
+   "up": false,
+   "value": -4.5
+  },
+  {
+   "down": true,
+   "history": [],
+   "id": "demo-habit-8",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-6",
+    "demo-tag-22",
+    "demo-tag-0"
+   ],
+   "text": "Skip breakfast",
+   "type": "habit",
+   "up": false,
+   "value": -21.0
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-26T00:44:58.690870+00:00",
+   "date": "2026-08-18T00:44:58.690870+00:00",
+   "id": "demo-todo-0",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-20",
+    "demo-tag-10"
+   ],
+   "text": "Replace the kitchen bulb",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-25T00:44:58.690870+00:00",
+   "date": "2026-08-17T00:44:58.690870+00:00",
+   "id": "demo-todo-1",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-17",
+    "demo-tag-10"
+   ],
+   "text": "Buy coffee filters",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-24T00:44:58.690870+00:00",
+   "date": "2026-08-16T00:44:58.690870+00:00",
+   "id": "demo-todo-2",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-18",
+    "demo-tag-6",
+    "demo-tag-9"
+   ],
+   "text": "Call the dentist",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-23T00:44:58.690870+00:00",
+   "date": "2026-08-19T00:44:58.690870+00:00",
+   "id": "demo-todo-3",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-7",
+    "demo-tag-23",
+    "demo-tag-9"
+   ],
+   "text": "Renew the domain",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-22T00:44:58.690870+00:00",
+   "date": "2026-08-20T00:44:58.690870+00:00",
+   "id": "demo-todo-4",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-2",
+    "demo-tag-10"
+   ],
+   "text": "Pick up the parcel",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-21T00:44:58.690870+00:00",
+   "date": "2026-08-21T00:44:58.690870+00:00",
+   "id": "demo-todo-5",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-1",
+    "demo-tag-4",
+    "demo-tag-10"
+   ],
+   "text": "Draft the retro notes",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-20T00:44:58.690870+00:00",
+   "id": "demo-todo-6",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-3",
+    "demo-tag-23",
+    "demo-tag-8",
+    "demo-tag-11"
+   ],
+   "text": "Compare bike locks",
+   "type": "todo"
+  },
+  {
+   "completed": false,
+   "createdAt": "2026-07-19T00:44:58.690870+00:00",
+   "id": "demo-todo-7",
+   "notes": "",
+   "priority": 1,
+   "tags": [
+    "demo-tag-0",
+    "demo-tag-8",
+    "demo-tag-11"
+   ],
+   "text": "Sort the photo backlog",
+   "type": "todo"
+  },
+  {
+   "id": "demo-reward-0",
+   "tags": [],
+   "text": "Fancy coffee",
+   "type": "reward",
+   "value": 20
+  },
+  {
+   "id": "demo-reward-1",
+   "tags": [],
+   "text": "An evening off",
+   "type": "reward",
+   "value": 35
+  },
+  {
+   "id": "demo-reward-2",
+   "tags": [],
+   "text": "New headphones",
+   "type": "reward",
+   "value": 50
+  }
+ ],
+ "user": {
+  "_id": "demo-user",
+  "history": {
+   "exp": [
+    {
+     "date": "2026-07-01T00:44:58.690870+00:00",
+     "value": 177
+    },
+    {
+     "date": "2026-07-02T00:44:58.690870+00:00",
+     "value": 165
+    },
+    {
+     "date": "2026-07-03T00:44:58.690870+00:00",
+     "value": 164
+    },
+    {
+     "date": "2026-07-04T00:44:58.690870+00:00",
+     "value": 158
+    },
+    {
+     "date": "2026-07-05T00:44:58.690870+00:00",
+     "value": 159
+    },
+    {
+     "date": "2026-07-06T00:44:58.690870+00:00",
+     "value": 155
+    },
+    {
+     "date": "2026-07-07T00:44:58.690870+00:00",
+     "value": 160
+    },
+    {
+     "date": "2026-07-08T00:44:58.690870+00:00",
+     "value": 146
+    },
+    {
+     "date": "2026-07-09T00:44:58.690870+00:00",
+     "value": 145
+    },
+    {
+     "date": "2026-07-10T00:44:58.690870+00:00",
+     "value": 146
+    },
+    {
+     "date": "2026-07-11T00:44:58.690870+00:00",
+     "value": 149
+    },
+    {
+     "date": "2026-07-12T00:44:58.690870+00:00",
+     "value": 138
+    },
+    {
+     "date": "2026-07-13T00:44:58.690870+00:00",
+     "value": 139
+    },
+    {
+     "date": "2026-07-14T00:44:58.690870+00:00",
+     "value": 139
+    },
+    {
+     "date": "2026-07-15T00:44:58.690870+00:00",
+     "value": 136
+    },
+    {
+     "date": "2026-07-16T00:44:58.690870+00:00",
+     "value": 137
+    },
+    {
+     "date": "2026-07-17T00:44:58.690870+00:00",
+     "value": 122
+    },
+    {
+     "date": "2026-07-18T00:44:58.690870+00:00",
+     "value": 119
+    },
+    {
+     "date": "2026-07-19T00:44:58.690870+00:00",
+     "value": 128
+    },
+    {
+     "date": "2026-07-20T00:44:58.690870+00:00",
+     "value": 124
+    },
+    {
+     "date": "2026-07-21T00:44:58.690870+00:00",
+     "value": 122
+    },
+    {
+     "date": "2026-07-22T00:44:58.690870+00:00",
+     "value": 119
+    },
+    {
+     "date": "2026-07-23T00:44:58.690870+00:00",
+     "value": 110
+    },
+    {
+     "date": "2026-07-24T00:44:58.690870+00:00",
+     "value": 100
+    },
+    {
+     "date": "2026-07-25T00:44:58.690870+00:00",
+     "value": 99
+    },
+    {
+     "date": "2026-07-26T00:44:58.690870+00:00",
+     "value": 95
+    },
+    {
+     "date": "2026-07-27T00:44:58.690870+00:00",
+     "value": 99
+    },
+    {
+     "date": "2026-07-28T00:44:58.690870+00:00",
+     "value": 94
+    },
+    {
+     "date": "2026-07-29T00:44:58.690870+00:00",
+     "value": 98
+    },
+    {
+     "date": "2026-07-30T00:44:58.690870+00:00",
+     "value": 85
+    },
+    {
+     "date": "2026-07-31T00:44:58.690870+00:00",
+     "value": 93
+    },
+    {
+     "date": "2026-08-01T00:44:58.690870+00:00",
+     "value": 74
+    },
+    {
+     "date": "2026-08-02T00:44:58.690870+00:00",
+     "value": 77
+    },
+    {
+     "date": "2026-08-03T00:44:58.690870+00:00",
+     "value": 84
+    },
+    {
+     "date": "2026-08-04T00:44:58.690870+00:00",
+     "value": 76
+    },
+    {
+     "date": "2026-08-05T00:44:58.690870+00:00",
+     "value": 66
+    },
+    {
+     "date": "2026-08-06T00:44:58.690870+00:00",
+     "value": 59
+    },
+    {
+     "date": "2026-08-07T00:44:58.690870+00:00",
+     "value": 72
+    },
+    {
+     "date": "2026-08-08T00:44:58.690870+00:00",
+     "value": 62
+    },
+    {
+     "date": "2026-08-09T00:44:58.690870+00:00",
+     "value": 52
+    },
+    {
+     "date": "2026-08-10T00:44:58.690870+00:00",
+     "value": 55
+    },
+    {
+     "date": "2026-08-11T00:44:58.690870+00:00",
+     "value": 60
+    },
+    {
+     "date": "2026-08-12T00:44:58.690870+00:00",
+     "value": 52
+    },
+    {
+     "date": "2026-08-13T00:44:58.690870+00:00",
+     "value": 43
+    },
+    {
+     "date": "2026-08-14T00:44:58.690870+00:00",
+     "value": 46
+    }
+   ],
+   "todos": [
+    {
+     "date": "2026-07-01T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-02T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-07-03T00:44:58.690870+00:00",
+     "value": -4
+    },
+    {
+     "date": "2026-07-04T00:44:58.690870+00:00",
+     "value": -4
+    },
+    {
+     "date": "2026-07-05T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-06T00:44:58.690870+00:00",
+     "value": -4
+    },
+    {
+     "date": "2026-07-07T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-07-08T00:44:58.690870+00:00",
+     "value": -5
+    },
+    {
+     "date": "2026-07-09T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-07-10T00:44:58.690870+00:00",
+     "value": -4
+    },
+    {
+     "date": "2026-07-11T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-12T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-13T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-14T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-15T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-07-16T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-17T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-07-18T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-19T00:44:58.690870+00:00",
+     "value": -3
+    },
+    {
+     "date": "2026-07-20T00:44:58.690870+00:00",
+     "value": -5
+    },
+    {
+     "date": "2026-07-21T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-22T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-07-23T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-07-24T00:44:58.690870+00:00",
+     "value": -4
+    },
+    {
+     "date": "2026-07-25T00:44:58.690870+00:00",
+     "value": -3
+    },
+    {
+     "date": "2026-07-26T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-07-27T00:44:58.690870+00:00",
+     "value": -5
+    },
+    {
+     "date": "2026-07-28T00:44:58.690870+00:00",
+     "value": 0
+    },
+    {
+     "date": "2026-07-29T00:44:58.690870+00:00",
+     "value": 0
+    },
+    {
+     "date": "2026-07-30T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-07-31T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-08-01T00:44:58.690870+00:00",
+     "value": -3
+    },
+    {
+     "date": "2026-08-02T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-08-03T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-08-04T00:44:58.690870+00:00",
+     "value": -5
+    },
+    {
+     "date": "2026-08-05T00:44:58.690870+00:00",
+     "value": -4
+    },
+    {
+     "date": "2026-08-06T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-08-07T00:44:58.690870+00:00",
+     "value": -3
+    },
+    {
+     "date": "2026-08-08T00:44:58.690870+00:00",
+     "value": -6
+    },
+    {
+     "date": "2026-08-09T00:44:58.690870+00:00",
+     "value": -5
+    },
+    {
+     "date": "2026-08-10T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-08-11T00:44:58.690870+00:00",
+     "value": -2
+    },
+    {
+     "date": "2026-08-12T00:44:58.690870+00:00",
+     "value": 0
+    },
+    {
+     "date": "2026-08-13T00:44:58.690870+00:00",
+     "value": -1
+    },
+    {
+     "date": "2026-08-14T00:44:58.690870+00:00",
+     "value": 0
+    }
+   ]
+  },
+  "preferences": {
+   "dayStart": 6
+  },
+  "profile": {
+   "name": "Wanderer"
+  },
+  "stats": {
+   "class": "rogue",
+   "exp": 118,
+   "gp": 174,
+   "hp": 41,
+   "lvl": 14,
+   "maxHealth": 50,
+   "mp": 32,
+   "toNextLevel": 260
+  }
+ },
+ "version": 1
+}

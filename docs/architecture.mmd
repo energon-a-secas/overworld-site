@@ -1,0 +1,50 @@
+---
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#0f172a"
+    primaryTextColor: "#e2e8f0"
+    primaryBorderColor: "#0063e5"
+    lineColor: "#38bdf8"
+    secondaryColor: "#1e293b"
+    tertiaryColor: "#1e293b"
+    clusterBkg: "#f0f7ff"
+    clusterBorder: "#bfdbfe"
+    edgeLabelBackground: "#e8f0ff"
+    mainBkg: "#0f172a"
+    nodeBorder: "#0063e5"
+    titleColor: "#1e1b4b"
+    fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif"
+    fontSize: "13px"
+---
+flowchart TB
+    User([User]) --> HTML["index.html<br/>App shell + CSP"]
+
+    subgraph Frontend["Frontend (ES Modules)"]
+        HTML --> app["app.js<br/>Entry point"]
+        app --> state["state.js<br/>App state; credentials held apart"]
+        app --> render["render.js<br/>Shell + view dispatch"]
+        app --> events["events.js<br/>Delegated handlers"]
+        render --> views["views/<br/>missions, capture, dashboard,<br/>hygiene, archive, connect"]
+        events --> dataLayer["data.js<br/>Pull orchestration + selectors"]
+        dataLayer --> grammarJs["grammar.js<br/>Sigil parsing"]
+        dataLayer --> api["habitica.js<br/>Client + 30/min limiter"]
+        dataLayer --> idb["archive.js<br/>IndexedDB store"]
+    end
+
+    api -->|"x-api-user / x-api-key<br/>CORS is open, no proxy"| Habitica[("habitica.com<br/>api/v3")]
+    idb <--> IDB[("IndexedDB<br/>overworld")]
+
+    subgraph CLI["tools/hbx.py (Python, stdlib only)"]
+        launchd["launchd<br/>daily snapshot"] --> hbx["hbx snapshot<br/>analyze / plan / apply"]
+        hbx --> grammarPy["hbxlib/grammar.py<br/>mirror of grammar.js"]
+        hbx --> store["hbxlib/archive.py<br/>append-only JSONL, deduped"]
+    end
+
+    hbx -->|"4 reads per snapshot"| Habitica
+    store <--> Disk[("~/.local/share/overworld<br/>snapshots + archive")]
+
+    store -.->|"overworld-bundle.json"| idb
+    idb -.->|"export, then hbx merge"| store
+
+    Habitica -.->|"deletes completed to-dos at 30d,<br/>averages history at 60d"| Loss>"Data gone unless<br/>already archived"]

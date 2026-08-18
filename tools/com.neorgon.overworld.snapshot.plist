@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Runs `hbx snapshot` once a day. This is the piece that makes the archive
+  complete: Habitica deletes completed to-dos after 30 days, and the site only
+  archives while its tab is open.
+
+  Edit the three absolute paths below, then:
+    cp tools/com.neorgon.overworld.snapshot.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.neorgon.overworld.snapshot.plist
+
+  Credentials come from ~/.config/hbx/env, not from this file. launchd agents do
+  not inherit your shell environment, and a plist in LaunchAgents is world-readable.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.neorgon.overworld.snapshot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- System python on purpose: launchd does not load your shell, so an
+             asdf/pyenv shim would not resolve. hbx is stdlib-only, so 3.8+ is enough. -->
+        <string>/usr/bin/python3</string>
+        <string>/CHANGE/ME/overworld-site/tools/hbx.py</string>
+        <string>snapshot</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>21</integer>
+        <key>Minute</key><integer>30</integer>
+    </dict>
+
+    <!-- Catches up after the Mac was asleep at the scheduled time. Without this,
+         a laptop closed at 21:30 every day never snapshots at all. -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/overworld-snapshot.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/overworld-snapshot.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>OVERWORLD_ARCHIVE</key>
+        <string>/CHANGE/ME/.local/share/overworld</string>
+    </dict>
+</dict>
+</plist>
