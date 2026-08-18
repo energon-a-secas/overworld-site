@@ -22,3 +22,9 @@ package-lock.json
 .forge/
 # …but the credentials TEMPLATE is repo content: a fresh clone needs it
 !.env.example
+
+# ── Neorgon base (enforced by smoke check 20) ─────────────────────────────────
+__pycache__/
+*.py[cod]
+skills-archived/
+*.log
