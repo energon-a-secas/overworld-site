@@ -18,16 +18,7 @@
     in a meta CSP, and GitHub Pages cannot send response headers. Writing them
     here would look like protection while doing nothing.
   -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self';
-    connect-src 'self' https://habitica.com;
-    style-src 'self' https://cdn.neorgon.org 'unsafe-inline';
-    img-src 'self' https://cdn.neorgon.org data:;
-    font-src 'self' https://cdn.neorgon.org data:;
-    base-uri 'self';
-    form-action 'none';
-    object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://static.cloudflareinsights.com; connect-src 'self' https://habitica.com https://neorgon.goatcounter.com https://cloudflareinsights.com; style-src 'self' https://cdn.neorgon.org 'unsafe-inline'; img-src 'self' https://cdn.neorgon.org data: https://neorgon.goatcounter.com; font-src 'self' https://cdn.neorgon.org data:; base-uri 'self'; form-action 'none'; object-src 'none'">
 
   <title>Overworld | Your Habitica day, at a glance</title>
   <meta name="description" content="Map your Habitica tasks onto zones, see open missions where you are, and archive the completed to-dos Habitica deletes after 30 days">
