@@ -32,7 +32,7 @@ export function render(state, tagNameById, completed = []) {
     </div>
 
     <div class="stat-row">
-      ${statTile('Level', stats.lvl ?? '—', escHtml(stats.class || ''))}
+      ${statTile('Level', stats.lvl ?? '-', escHtml(stats.class || ''))}
       ${statTile('Health', Math.round(stats.hp ?? 0), `of ${Math.round(stats.maxHealth ?? 50)}`)}
       ${statTile('Gold', Math.round(stats.gp ?? 0), '')}
       ${statTile('Done, 30 days', total30, 'from the archive')}
